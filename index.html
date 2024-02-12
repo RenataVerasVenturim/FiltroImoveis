@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuscadorImoveis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header>
+        <nav>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand">
+                    <img src="logo.jpg" class="img-fluid" alt="...">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Buscador</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Contatos</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </nav>
+    </header>
+    <main>
+        <img src="banner.jpg" class="img-fluid" alt="Buscador de imóveis">
+        <section id="EscolhaCadastroOuBusca" style="padding:100px;">
+            <div>
+                <div class="form-check">                            
+                    <input type="radio" id="AbreSecaoDeCadastro" name="CadastroOuBusca">
+                    <label for="AbreSecaoDeCadastro">Cadastrar imóvel</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="SecaoBusca" name="CadastroOuBusca">
+                    <label for="SecaoBusca">Pesquisa imóvel</label>
+                </div>
+            </div>
+        </section>
+        <section id="secaoDeBusca" class="container-fluid bg-light text-center p:2"style="display:none;max-width:700px;">
+        <h1>
+            Buscar Imóveis
+        </h1>
+            <div>
+                <form>    
+                    <fieldset>                
+                        <div class="form-check">
+                            
+                                <legend>
+                                    O que procura?
+                                </legend>
+    
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="comprar" checked>
+                            <label class="form-check-label" for="comprar">
+                            Comprar
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="alugar" checked>
+                            <label class="form-check-label" for="alugar">
+                            Alugar
+                            </label>                       
+                        </div>
+                        
+                    </fieldset> 
+                    </div>
+                    <div class="form-check">
+                        <label for="valorMaximo">
+                            Valor (R$):
+                        </label>
+                        <input type="number" class="form-control" id="valorMaximo" placeholder="Digite o valor máximo" required="">
+                    </div>  
+                    <button type="button" class="btn btn-primary" id="btn">Buscar</button>
+                
+       
+                    <h2>
+                        <label for="resultado">Resultados da busca:</label> 
+                    </h2>
+                    <textarea id="resultado" rows="10" cols="50" readonly></textarea>
+                </form>
+        </section>
+        <section id="secaoCadastro" style="display:none;">
+                <form>
+                    <fieldset>
+                        <legend>
+                            Adicionar imóveis
+                        </legend>
+                        <div>
+                            <div class="form-check">                            
+                                <input class="form-check-input" type="radio" id="venda"  name="vendedorOuLocatario">
+                                <label class="form-check-label" for="venda">Vender </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="aluguel" name="vendedorOuLocatario">
+                                <label class="form-check-label" for="aluguel">Alugar</label>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="valorCadastro">Valor (R$): </label>
+                            <input class="form-control" type="number" id="valorCadastro">
+                        </div>
+                        <div>
+                            <label for="descricaoCadastro">Descrição:</label>
+                            <input class="form-control" type="text" name="descricaoCadastro" id="descricaoCadastro">
+                        </div>
+                        <div>
+                            <label for="enderecoCadastro"> Endereço:</label>
+                            <input class="form-control" type="text" id="enderecoCadastro">
+                        </div>
+                    </fieldset>
+                    <button type="button" class="btn btn-primary" id="btnCadastro"> Cadastrar Imóvel</button>
+                </form>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>
+            Desenvolvido por Renata Veras Venturim @2023
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="script2.js"></script>
+</body>
+</html>
